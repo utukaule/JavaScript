@@ -1,0 +1,17 @@
+Q. How website works?
+
+Client needs google.com
+    ->  you will go to url on browser
+    ->  You will go googles web server
+    ->  web server gets the information that this is utu with 
+        ip address and some other information
+    ->  Actually client will send the get request.
+    ->  so the request will go to web server and it will see that
+        in which folder this google.com page is
+    ->  web server is nothing but a computer
+    ->  web server will also see security aspects like this ip is
+        banned or not and etc. like logged in or not.
+    ->  And then server returns the respones with html css js code as
+        a bundle to the web browser. You can see that bundle code by 
+        doing right click and go to inspect or view page source.
+    ->  

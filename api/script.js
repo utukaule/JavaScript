@@ -3,7 +3,7 @@
 const dogImg = document.getElementById("dogs");
 const dogButton = document.getElementById('dogButton');
 
-const getNewDog = () =>{   
+const getNewDog = () =>{
     fetch('https://dog.ceo/api/breeds/image/random')
     .then(res => res.json())
     .then(json => {
@@ -12,3 +12,8 @@ const getNewDog = () =>{
 }
 
 dogButton.onclick = () => getNewDog()
+
+
+
+
+

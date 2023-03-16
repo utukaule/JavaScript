@@ -14,7 +14,6 @@ const getHero = (id,name) => {
             // console.log(json.name)
             const name = `<h1>${json.name}</h1>`
             const state = getStatsHTML(json)
-            const inte = `<p>${json.powerstats.intelligence}</p>`
             heroImg.innerHTML = `${name}<img src="${json.image.url} " height=200 width=200 />${state}`
         })
 }
@@ -25,8 +24,9 @@ const getSeachHero = (name) => {
         .then(json => {
             const hero = json.results[0]
             const name = `<h1>${hero.name}</h1>`
-            const inte = `<p>${hero.powerstats.intelligence}</p>`
-            heroImg.innerHTML = `${name}<img src="${hero.image.url} " height=200 width=200 />${inte}`
+            // const inte = `<p>${hero.powerstats.intelligence}</p>`
+            const state = getStatsHTML(json.results[0])
+            heroImg.innerHTML = `${name}<img src="${hero.image.url} " height=200 width=200 />${state}`
         })
 }
 
@@ -39,6 +39,8 @@ button.onclick = () => getHero(getRandomHero())
 
 searchButton.onclick = () => getSeachHero(inputHero.value)
 
+
+//states
 const getStatsHTML = (character) => {
     const state = Object.keys(character.powerstats).map(stat => {
         return `<p>${stat}: ${character.powerstats[stat]}</p>`
