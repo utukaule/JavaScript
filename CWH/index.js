@@ -21,6 +21,7 @@ var num2 = 66;
 //String
 var str1 = "this is string";
 var str2 = 'this is string 2';
+
 // number
 var num1 = 1;
 var num2 = 2;
@@ -86,9 +87,11 @@ var arr = [1,2,4,5,5]
     // 2.Non-primitive  :-  Arrays and objects
 
 
+
 //11. Operators in js
 
 // Arithmetics operators + - * /
+
 // Assignment operators 
 var x = 10
 var c = x; //assigning value of x to c
@@ -111,14 +114,14 @@ function avg(q,w){
 c = avg(4,5);
 // console.log(c)
 
-//13. ForEach loop
+// 13. ForEach loop
 var arr2 = [1,2,3,4,5,6,7];
 // arr2.forEach((e)=>{
 //     console.log(e);
 // })
 
 
-// String methods
+//14. String methods
 let str3 = 'utu is a good good boy';
 // console.log(str3.length)
 // console.log(str3.indexOf('good'));
@@ -130,10 +133,116 @@ let str3 = 'utu is a good good boy';
 // console.log(d);
 
 
-// Date
+//15. Date
 // look for date methods
 let mydate = new Date()
-console.log(mydate);
-console.log(mydate.getTime());
-console.log(mydate.getFullYear())
-console.log(mydate.getHours()+":"+mydate.getMinutes()+":"+mydate.getSeconds())
+// console.log(mydate);
+// console.log(mydate.getTime());
+// console.log(mydate.getFullYear())
+// console.log(mydate.getHours()+":"+mydate.getMinutes()+":"+mydate.getSeconds())
+
+
+// 16. DOM Manipulation
+let clickme = document.getElementById('click');
+// console.log(clickme);
+
+let one1 = document.getElementsByClassName('one');
+// console.log(one1)
+one1[0].style.fontSize = '30px'
+one1[0].classList.add('three'); 
+// console.log(one1[0].innerText);
+// console.log(one1[0].innerHTML);
+let four = document.createElement('p')
+four.innerText = 'This is me appending new tag';
+
+one1[0].appendChild(four)
+// console.log(one1);
+
+
+
+// 17. Selecting using query
+let sel = document.querySelector('.one')
+// console.log(sel)
+
+let seltwo = document.querySelectorAll('.one')
+// console.log(seltwo)
+
+
+
+// 18. Events in js
+// events is like onClick, onMouseOver, onLoad etc
+
+function clicked(){
+    // console.log('button is clicked');
+}
+window.onload = function(){
+    // console.log('document is loaded completely');
+}
+
+let prevHtml = document.querySelectorAll('.two')[0].innerHTML;
+
+
+// 19. addEventListener
+
+one1[0].addEventListener('mouseup',()=>{
+    document.querySelectorAll('.two')[0].innerHTML = prevHtml;
+})
+
+one1[0].addEventListener('mousedown',()=>{
+    // console.log('click hue');
+    document.querySelectorAll('.two')[0].innerHTML = "<p>we changed the innerHTML of two by clicking on container one</p>"
+})
+
+
+
+// 20. setTimeout and setInterval
+// Arrow function
+// function sumone(a,b){
+//     return a+b;
+// }
+// sumtwo = (a,b) => {
+//     return a+b
+// }
+
+    //setTimeout
+    logkaro = ()=>{
+        document.querySelectorAll('.two')[0].innerHTML = "<p>Do second ke bad aaunga ok?</p>"
+        console.log('me aa gaya')
+    }
+    // setTimeout(logkaro,2000) 
+    // To stop setTimeout use clearTimeout
+
+    // setInterval
+
+    // let stop = setInterval(logkaro,2000);
+    // To stop setInterval use clearInterval
+
+
+
+// 21. Local Storage
+    //js localstorage
+    // -> Localstorage is used to store the data 
+    //    on user machine or computer as a string.
+    
+    // localStorage.setItem('name','utkarsh')
+    // localStorage.getItem('name');
+    // localStorage.removeItem('name');
+    // localStorage.clear()
+
+
+// 22. JSON (javascript object notation)
+    // -> it is open standard file Formate
+    // -> used to exchange the data
+    // -> we can stringify the data to transport it and then we can again 
+    //    take it from storage and display in object formate.
+    // let obj = {
+    //     name:'utu',
+    // }
+    // let jso = JSON.stringify(obj);
+    // console.log(jso);
+
+    // let parse = JSON.parse(jso);
+    // console.log(parse);
+
+
+// 23. JavaScript versions (ECMAScript)
